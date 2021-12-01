@@ -2,6 +2,7 @@ renv::status()
 renv::hydrate()
 renv::snapshot(prompt = F)
 
+library(usethis)
 library(tidyverse)
 library(Seurat)
 library(SingleCellExperiment)
