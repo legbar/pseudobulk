@@ -37,3 +37,8 @@ mat_agg %>% as_tibble(rownames = "gene_id") %>% write_csv("output/aggregated_cou
 
 mat_agg %>% as.matrix() %>% View
 mat %>% as.matrix() %>% View
+
+# calculate cpm
+library(edgeR)
+
+cpm(t(as.matrix(mat_agg))) %>% as_tibble(rownames = "gene_id") %>% write_csv("output/aggregated_cpm.csv")
